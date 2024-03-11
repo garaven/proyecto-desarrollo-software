@@ -1,27 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
-import Darkmode from '../components/Darkmode.astro'
+import Lightmode from '../components/Lightmode.astro'
 ---
 
 <Layout title="Envirosense">
-	<header class="flex justify-between w-10/12 h-36 bg-[#FFFBF8] items-center gap-12">
+	<header class="flex justify-between w-10/12 h-36 items-center gap-12">
 		<div class="flex items-center gap-3">
 			<Icon/>
-			<h1 class="font-bold text-4xl">Envirosense</h1>
+			<h1 class="font-bold text-4xl text-[#F7F2B7]">Envirosense</h1>
 		</div>
-		<div id="menu" class="w-screen flex items-center justify-evenly gap-6">
-			<button class="flex-shrink-0 transition duration-300 ease-in-out hover:scale-110"><Darkmode/></button>
-			<button class="font-codec-regular flex-shrink-0 whitespace-nowrap border-b-[1px] border-transparent transition duration-300 ease-in-out hover:scale-110 hover:border-[#02142B]">About us</button>
-			<button class="font-codec-bold w-40 h-12 flex-shrink-0 bg-[#02142B] text-[#F7F2B7] rounded-3xl transition duration-300 ease-in-out hover:scale-110 items-center justify-center">Login as guest</button>
-		</div>
+		<nav id="menu" class="w-screen flex items-center justify-around">
+			<button class="flex-shrink-0 transition duration-300 ease-in-out hover:scale-110 ml-auto"><Lightmode/></button>
+			<button class="font-codec-regular text-[#F7F2B7] flex-shrink-0 whitespace-nowrap border-b-[1px] border-transparent transition duration-300 ease-in-out hover:scale-110 hover:border-[#F7F2B7] ml-auto">About us</button>
+			<button class="font-codec-bold w-40 h-12 flex-shrink-0 bg-[#F7F2B7] text-[#02142B] rounded-3xl transition duration-300 ease-in-out hover:scale-110 items-center justify-center ml-auto">Login as guest</button>
+		</nav>
 	</header>
-	<div class="flex flex-wrap items-center justify-around mb-6 w-11/12 h-screen border-2 border-[#02142B] rounded-[48px] bg-[#FFFBF8]">
+	<div class="flex flex-wrap items-center justify-around mb-6 w-11/12 h-full border-2 border-[#F7F2B7] rounded-[48px] bg-[#02142B]">
 		<div>
-			<h2 class="font-light text-4xl">Transform your energy <br> consumption into data.</h2>
+			<h2 id=slogan class="font-light text-4xl text-[#F7F2B7]">Transform your energy <br> consumption into data.</h2>
 		</div>
-		<div id=loginbox class="w-96 h-96 rounded-[48px] bg-[#02142B]">
-		
+		<div id=loginbox class="flex size-[550px] rounded-[48px] bg-[#F7F2B7] items-center justify-center">
+			<h3 class="font-medium text-3xl text-[#02142B] self-start my-11">Login now</h3>
 		</div>
 	</div>
 </Layout>
