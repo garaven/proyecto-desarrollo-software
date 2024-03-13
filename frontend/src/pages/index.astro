@@ -22,8 +22,12 @@ import Menu from '../components/Menu.astro';
 		<div>
 			<h2 id=slogan class="font-light text-4xl text-[#F7F2B7]">Transform your energy <br> consumption into data.</h2>
 		</div>
-		<div id=loginbox class="flex size-[550px] rounded-[48px] bg-[#F7F2B7] items-center justify-center">
-			<h3 class="font-medium text-3xl text-[#02142B] self-start my-11">Login now</h3>
+		<div id=loginbox class="flex flex-col size-[550px] rounded-[48px] bg-[#F7F2B7] items-center gap-7">
+			<div>
+				<p class="font-medium text-3xl text-[#02142B] self-start my-9">Login now</p>
+			</div>
+			<input id=email class="rounded-2xl h-10 w-9/12 my-3 p-3" type="email" placeholder="Email">
+			<input id=password class="rounded-2xl h-10 w-9/12 my-3 p-3" type="password" placeholder="Password">
 		</div>
 	</div>
 </Layout>
