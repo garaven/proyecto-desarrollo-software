@@ -12,11 +12,11 @@ import Graphic from '../components/Graphic.astro';
   <form action="#" class="size-[350px] border border-[#f7f2b7] flex flex-col px-6 py-4 justify-around rounded-3xl shadow-2xl shadow-[rgba(247,242,183,0.2)] bg-[#00091d]">
     <p class="text-center font-bold text-2xl text-[#f7f2b7]">Login now</p>
     <label class="flex flex-col font-semibold text-[#f7f2b7]">Email<input class="focus:placeholder:text-transparent text-white font-normal bg-transparent border border-[#f7f2b7] px-3 mt-2 h-8 rounded-full" type="email" placeholder="Enter your email" required></label>
-    <label class="flex flex-col font-semibold text-[#f7f2b7]">Password<input class="focus:placeholder:text-transparent bg-transparent border border-[#f7f2b7] px-3 mt-2 h-8 rounded-full text-white" type="password" placeholder="Enter your password" required></label>
+    <label class="flex flex-col font-semibold text-[#f7f2b7]">Password<input class="focus:placeholder:text-transparent bg-transparent border border-[#f7f2b7] px-3 mt-2 h-8 rounded-full text-white" type="password" placeholder="Enter your password" required minlength="8"></label>
     <div class="flex justify-between">
       <label class="flex gap-2 text-sm text-white font-light"><input type="checkbox"> Remember me</label>
-      <a class="text-sm italic underline text-white" href="#">Forgot password?</a>
+      <a class="text-sm italic underline text-blue-500" href="#">Forgot password?</a>
     </div>
-    <button class="mt-4 font-bold py-2 rounded-full bg-[#f7f2b7] shadow-inner hover:shadow-white transition hover:text-[#a0a]" type="submit">Log in</button>
+    <button class="mt-4 font-bold py-2 rounded-full bg-[#f7f2b7] shadow-inner hover:shadow-white transition hover:text-[#02142bb2]" type="submit">Log in</button>
   </form>
 </article>
