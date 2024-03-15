@@ -1,4 +1,4 @@
-<h1> Login page 1.0 <h1/>
+Login page 1.0
 Remaining sections:
 - Registration
 - Forgot password
