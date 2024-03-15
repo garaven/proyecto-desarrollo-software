@@ -1,0 +1,20 @@
+---
+import Icon from '../components/Icon.astro';
+import Lightmode from '../components/Lightmode.astro';
+---
+
+<nav class="w-full h-[90px] flex justify-between items-center px-8">
+  <div class="flex items-center gap-2 h-9">
+    <Icon/>
+    <span class="text-[#f7f2b7] text-3xl font-bold">Envirosense</span>
+  </div>
+  <ul class="list-none flex justify-between items-center w-[350px]">
+    <li class="transition duration-300 ease-in-out hover:scale-[1.2] cursor-pointer"><Lightmode/></li>
+    <li>
+      <a class="inline-block text-[#f7f2b7]  border-b-[1px] border-transparent transition duration-300 ease-in-out hover:border-[#F7F2B7] hover:scale-110" href="#">About us</a>
+    </li>
+    <li>
+      <button class="px-4 py-2 font-semibold bg-[#F7F2B7] text-[#02142B] rounded-3xl transition duration-300 ease-in-out hover:scale-110">Login as guest</button>
+    </li>
+  </ul>
+</nav>
