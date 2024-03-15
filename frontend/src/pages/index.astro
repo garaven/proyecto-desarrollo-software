@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 import Lightmode from '../components/Lightmode.astro';
 import Menu from '../components/Menu.astro';
+import Graphic from '../components/Graphic.astro';
 ---
 
 <Layout title="Envirosense">
@@ -12,24 +13,34 @@ import Menu from '../components/Menu.astro';
 			<h1 class="font-bold text-4xl text-[#F7F2B7]">Envirosense</h1>
 		</div>
 		<button class="md:hidden transition duration-300 ease-in-out hover:scale-110"><Menu/></button>
-		<nav id="menu" class="w-screen hidden md:flex items-center justify-around">
+		<nav id="menu" class="w-[500px] hidden md:flex items-center justify-around">
 			<button class="flex-shrink-0 transition duration-300 ease-in-out hover:scale-110 ml-auto"><Lightmode/></button>
 			<button class="font-codec-regular text-[#F7F2B7] flex-shrink-0 whitespace-nowrap border-b-[1px] border-transparent transition duration-300 ease-in-out hover:scale-110 hover:border-[#F7F2B7] ml-auto">About us</button>
-			<button class="font-codec-bold w-40 h-12 flex-shrink-0 bg-[#F7F2B7] text-[#02142B] rounded-3xl transition duration-300 ease-in-out hover:scale-110 items-center justify-center ml-auto">Login as guest</button>
+			<button class="font-semibold w-40 h-12 flex-shrink-0 bg-[#F7F2B7] text-[#02142B] rounded-3xl transition duration-300 ease-in-out hover:scale-110 items-center justify-center ml-auto">Login as guest</button>
 		</nav>
 	</header>
-	<div class="flex flex-wrap items-center justify-around mb-6 w-11/12 h-full border-2 border-[#F7F2B7] rounded-[48px] bg-[#02142B]">
+	<!-- MainBody  -->
+	<div class="flex flex-wrap-reverse items-center justify-around mb-6 w-11/12 h-full p-7 border border-transparent rounded-[48px] bg-[#02142B] lg:border-[#F7F2B7] gap-3">
 		<div>
-			<h2 id=slogan class="font-light text-4xl text-[#F7F2B7]">Transform your energy <br> consumption into data.</h2>
+			<h2 id=slogan class="font-light text-4xl text-[#F7F2B7] mb-12">Transform your energy <br> consumption into data.</h2>
+			<Graphic/>
 		</div>
-		<div id=loginbox class="flex flex-col size-[550px] rounded-[48px] bg-[#F7F2B7] items-center gap-4">
+		<!-- LoginBox -->
+		<div id=loginbox class="flex flex-col size-[520px] rounded-[48px] bg-[#F7F2B7] items-center gap-4">
 			<div>
-				<p class="font-bold text-3xl text-[#02142B] self-start my-9">Login now</p>
+				<p class="font-bold text-3xl text-[#02142B] self-start mt-12">Login now</p>
 			</div>
-			<label class="text-[#02142B] w-8/12 h-0 pointer-events-none" for="email">Email</label>
-			<input id=email class="bg-transparent border-2 border-[#02142B] rounded-3xl h-13 w-9/12 my-3 p-3 focus:bg-[#cfcb99] transition ease-in-out duration-200" type="email" placeholder="Enter your email">
-			<label class="text-[#02142B] w-8/12 h-0 pointer-events-none" for="password">Password</label>
-			<input id=password class="bg-transparent border-2 border-[#02142B] rounded-3xl h-13 w-9/12 my-3 p-3 focus:bg-[#cfcb99] transition ease-in-out duration-200" type="password" placeholder="Enter your password">
+			<label class="text-[#02142B] font-medium w-8/12 h-0 pointer-events-none" for="email">Email</label>
+			<input id=email class="bg-transparent border-2 border-[#02142B] rounded-3xl h-13 w-9/12 my-3 p-3 focus:outline-none focus:ring-1 focus:ring-[#02142B] transition ease-in-out duration-200" type="email" placeholder="Enter your email">
+			<label class="text-[#02142B] font-medium w-8/12 h-0 pointer-events-none" for="password">Password</label>
+			<input id=password class="bg-transparent border-2 border-[#02142B] rounded-3xl h-13 w-9/12 my-3 p-3 focus:outline-none focus:ring-1 focus:ring-[#02142B] transition ease-in-out duration-200" type="password" placeholder="Enter your password">
+			<label class="text-sm self-start ml-16 cursor-pointer select-none" for="checkbox">
+				<input id=checkbox class="size-4 mx-3" type="checkbox">Remember me
+			</label>
+			<a class="self-end mr-20 mt-[-35px] text-sm text-blue-500 hover:underline" href="#">Forgot password?</a>
+			<button class="font-semibold text-[#F7F2B7] w-9/12 h-14 mt-6 bg-[#02142B] rounded-full transition duration-300 ease-in-out hover:scale-105">Log in</button>
 		</div>
+		<!-- LoginBox End -->
 	</div>
+	<!-- MainBody End -->
 </Layout>
